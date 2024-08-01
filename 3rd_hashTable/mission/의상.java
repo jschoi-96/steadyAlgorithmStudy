@@ -3,7 +3,6 @@ package mission;
 import java.util.*;
 class 의상 {
     public int solution(String[][] clothes) {
-        int answer = 0;
         Map<String, List<String>> map = new HashMap<>();
 
         for (String[] cloth : clothes) {
@@ -17,6 +16,7 @@ class 의상 {
         List<String> list = new ArrayList<>(map.keySet());
 
         int res = 1;
+
         for (String key : list) {
             List<String> cloth = map.get(key);
             res *= (cloth.size() + 1); // 옷을 안입는 경우를 포함하여 + 1을 해줌
